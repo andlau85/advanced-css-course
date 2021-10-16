@@ -21,16 +21,19 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start full-start] 8rem [sidebar-end] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem [col-end])) [center-end] 1fr [full-end];
+  grid-template-columns: [sidebar-start full-start] 8rem [sidebar-end] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
 }
 
 .sidebar {
   background-color: #c69963;
+  grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
 }
 
 .header {
   background-color: #54483a;
+  grid-column: sidebar-end/col-start1;
+  grid-row: 1/1;
 }
 
 .realtors {
